@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<% if @same %>
+  <% if @real %>
+    <p>Congratulation! <% @result %> is a valid word!</p>
+    <% else %>
+    <p>Sorry but <% @result %> isn't an existing word</p>
+  <% end %>
+  <% else %>
+  <p>Sorry but <% @result %> can't be build out of <% @letters %> </p>
+<% end %>
+
+<%= link_to "Play again", "/new" %>
